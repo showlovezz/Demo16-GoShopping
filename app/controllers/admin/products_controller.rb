@@ -1,6 +1,6 @@
 class Admin::ProductsController < ApplicationController
 	
-	before_action :find_product, only: [:show]
+	before_action :find_product, only: [:show, :edit, :update]
 
 	def index
 		@products = Product.all
@@ -13,7 +13,7 @@ class Admin::ProductsController < ApplicationController
 	def create
 		@product = Product.new(product_params)
 		if @product.save
-			flash[:notice] = "產品建立成功"
+			flash[:notice] = "產品建立成功。"
 			redirect_to admin_products_path
 		else
 			flash.now[:alert] = "產品建立失敗，是不是少了什麼 !?"
@@ -21,7 +21,20 @@ class Admin::ProductsController < ApplicationController
 		end
 	end
 
-	def shoe
+	def show
+	end
+
+	def edit
+	end
+
+	def update
+		if @product.update(product_params)
+			flash[:notice] = "產品修改資料成功。"
+			redirect_to admin_products_path
+		else
+			flash.now[:alert] = "產品修改失敗，是不是少了什麼 !?"
+			render :edit
+		end
 	end
 
 	private
