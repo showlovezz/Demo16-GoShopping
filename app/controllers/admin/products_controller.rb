@@ -1,6 +1,6 @@
 class Admin::ProductsController < ApplicationController
 	
-	before_action :find_product, only: [:show, :edit, :update]
+	before_action :find_product, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@products = Product.all
@@ -35,6 +35,12 @@ class Admin::ProductsController < ApplicationController
 			flash.now[:alert] = "產品修改失敗，是不是少了什麼 !?"
 			render :edit
 		end
+	end
+
+	def destroy
+		@product.destroy
+		flash[:alert] = "商品已被刪除。"
+		redirect_to admin_products_path
 	end
 
 	private
