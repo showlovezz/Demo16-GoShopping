@@ -81,6 +81,7 @@ GEM
       devise (>= 4.4)
     erubi (1.7.1)
     execjs (2.7.0)
+    ffaker (2.10.0)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -211,6 +212,7 @@ DEPENDENCIES
   chromedriver-helper
   devise (~> 4.4, >= 4.4.3)
   devise-i18n (~> 1.6, >= 1.6.4)
+  ffaker (~> 2.10)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
