@@ -2,5 +2,6 @@
 
 價錢：<%= @product.product_price %><br>
 敘述：<%= @product.description %><br>
+圖片：<%= image_tag @product.product_image_url, width: '600px' %>
 <br>
 <%= link_to 'Back to index', admin_products_path %>

@@ -17,5 +17,9 @@
   <%= f.label :description, "Description" %>
   <%= f.text_area :description %>
 
+  <%= f.label :product_image, "Photo" %>
+  <%= image_tag @product.product_image_url, width: '300px' if @product.product_image? %>
+  <%= f.file_field :product_image %>
+
   <%= f.submit %>
 <% end %>

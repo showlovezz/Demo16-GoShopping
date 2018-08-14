@@ -32,3 +32,6 @@
 
 # Email send
 /config/email.yml
+
+# Product photo
+/public/uploads
