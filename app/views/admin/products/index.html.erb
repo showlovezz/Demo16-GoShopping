@@ -1,15 +1,26 @@
-<h1>產品後台</h1>
-<ul>
-  <% @products.each do |product| %>
-  <li>
-    <%= product.name %>
-    <%= link_to 'Show', admin_product_path(product) %>
-    <%= link_to 'Edit', edit_admin_product_path(product) %>
-    <%= link_to 'Delete', admin_product_path(product), method: :delete, data: {confirm:"Are you sure?"} %>
-  </li>
-  <% end %>
-</ul>
+<section class="mains_products_index">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="sidebar col-12 col-sm-4 col-md-4 col-lg-2 mt-4">
+				<%= render "admin/shared/sidebar" %>
+			</div>
 
-<%= paginate @products %>
-<br>
-<%= link_to 'New Product', new_admin_product_path %>
+			<div class="sidecontent col-12 col-sm-8 col-md-8 col-lg-10 mt-4">
+				<h1>產品後台</h1>
+				<ul>
+				  <% @products.each do |product| %>
+				  <li>
+				    <%= product.name %>
+				    <%= link_to 'Show', admin_product_path(product) %>
+				    <%= link_to 'Edit', edit_admin_product_path(product) %>
+				    <%= link_to 'Delete', admin_product_path(product), method: :delete, data: {confirm:"Are you sure?"} %>
+				  </li>
+				  <% end %>
+				</ul>
+				<%= paginate @products %>
+				<br>
+				<%= link_to 'New Product', new_admin_product_path %>
+			</div>
+		</div>
+	</div>
+</section>
