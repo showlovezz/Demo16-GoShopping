@@ -9,7 +9,7 @@
 				> .list-group {
 					> .list-group-item {
 						border: 0;
-						background-color: $dark_gray;
+						background-color: $darkgray;
 						color: $white;
 						> i {
 							color: $primary;
@@ -22,6 +22,20 @@
 					}
 					> .active {
 						background-color: $dark;
+					}
+				}
+			}
+			> .sidecontent {
+				> nav {
+					> ol {
+						background-color: $white;
+						> li {
+							> .breadcrumb-item-item {
+								color: $lightslategray;
+								text-decoration: none;
+								font-weight: 500;
+							}
+						}
 					}
 				}
 			}
