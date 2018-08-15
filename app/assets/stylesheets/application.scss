@@ -13,3 +13,9 @@
  *= require_self
  */
  @import "bootstrap";
+ @import "color";
+
+// 放前後台都會使用到的 Css code
+.navbar-nav {
+	width: 100%;
+}
