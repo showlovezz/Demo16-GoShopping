@@ -1,1 +1,24 @@
-<h1>電商網站總後台 - 未來這裡會放產品、新聞等等資訊。</h1>
+<section class="mains_index">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="sidebar col-12 col-sm-4 col-md-4 col-lg-2 mt-4">
+				<div class="list-group">
+					<%= link_to admin_root_path, class: "list-group-item list-group-item-action active" do %>
+				    <i class="fas fa-desktop"></i>
+				    <span>Mains index</span>
+				  <% end %>
+				  <%= link_to admin_products_path, class: "list-group-item list-group-item-action" do %>
+				  	<i class="fab fa-product-hunt"></i>
+				    <span>Products</span>
+				  <% end %>
+				  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+				  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur</a>
+				  <a href="#" class="list-group-item list-group-item-action">Vestibulum at</a>
+				</div>
+			</div>
+
+			<div class="sidecontent col-12 col-sm-8 col-md-8 col-lg-10 mt-4">
+			</div>
+		</div>
+	</div>
+</section>

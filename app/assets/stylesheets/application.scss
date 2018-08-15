@@ -14,8 +14,14 @@
  */
  @import "bootstrap";
  @import "color";
+ @import "admin/mains";
 
 // 放前後台都會使用到的 Css code
 .navbar-nav {
 	width: 100%;
+}
+
+// body 顏色
+body {
+	background-color: $light_gray;
 }
