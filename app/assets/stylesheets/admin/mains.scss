@@ -13,20 +13,27 @@
 						color: $white;
 						> i {
 							color: $primary;
-							font-size: 22px;
-							margin-right: 10px;
+							font-size: 24px;
+							margin-right: 20px;
 						}
 					}
 					> .list-group-item-action:hover {
 						background-color: $dark;
+						> i {
+							color: $white;
+						}
 					}
 					> .active {
 						background-color: $dark;
+						> i {
+							color: $white;
+						}
 					}
 				}
 			}
 			> .sidecontent {
 				> nav {
+					  box-shadow: 0 4px 70px -18px $dark;
 					> ol {
 						background-color: $white;
 						> li {
