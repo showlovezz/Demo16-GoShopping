@@ -4,10 +4,11 @@ class Admin::ProductsController < ApplicationController
 
 	def index
 		@products = Product.page(params[:page]).per(12)
+		@product = Product.new
 	end
 
 	def new
-		@product = Product.new
+		# @product = Product.new
 	end
 
 	def create
