@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// mains index, products_index
 .mains_index, .mains_products_index {
 	> .container-fluid {
 		> .row {
@@ -34,6 +35,7 @@
 			> .sidecontent {
 				> nav {
 					  box-shadow: 0 4px 70px -18px $dark;
+					  margin-bottom: 30px;
 					> ol {
 						background-color: $white;
 						> li {
@@ -44,6 +46,48 @@
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+// mains widget
+.row {
+	> .widget {
+		margin-bottom: 30px;
+		> .widget-body {
+			height: 130px;
+			box-shadow: 0 4px 70px -18px $dark;
+			> div {
+				margin-bottom: 5px;
+				> i {
+					color: $primary;
+					font-size: 24px;
+				}
+				> span {
+					font-size: 36px;
+				}
+			}
+		}
+		> .widget-item {
+			background-color: $white;
+		}
+		> .widget-item2 {
+			background-color: $orangered;
+			color: $white;
+			> div {
+				> i {
+					color: $white;
+				}
+			}
+		}
+		> .widget-item3 {
+			background-color: $deepskyblue;
+			color: $white;
+			> div {
+				> i {
+					color: $white;
 				}
 			}
 		}
