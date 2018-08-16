@@ -44,6 +44,9 @@
 								text-decoration: none;
 								font-weight: 500;
 							}
+							> .breadcrumb-item-item:hover {
+								color: $primary;
+							}
 						}
 					}
 				}

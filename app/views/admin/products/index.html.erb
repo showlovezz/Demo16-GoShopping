@@ -6,7 +6,18 @@
 			</div>
 
 			<div class="sidecontent col-12 col-sm-8 col-md-8 col-lg-10 mt-4">
-				<h1>產品後台</h1>
+				<!-- breadcrumb -->
+				<nav aria-label="breadcrumb">
+				  <ol class="breadcrumb">
+				    <li class="breadcrumb-item" aria-current="page">
+				    	<%= link_to "Home", admin_root_path, class: "breadcrumb-item-item" %>
+				    </li>
+				    <li class="breadcrumb-item" aria-current="page">
+				    	<%= link_to "Products", admin_products_path, class: "breadcrumb-item-item" %>
+				  	</li>
+				  </ol>
+				</nav>
+				<!-- products -->
 				<ul>
 				  <% @products.each do |product| %>
 				  <li>
@@ -21,6 +32,7 @@
 				<br>
 				<%= link_to 'New Product', new_admin_product_path %>
 			</div>
+		
 		</div>
 	</div>
 </section>
