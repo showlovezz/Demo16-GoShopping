@@ -46,19 +46,10 @@
 						<div class="tab-content" id="myTabContent">
 						  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 						  	<!-- products -->
-								<ul>
-								  <% @products.each do |product| %>
-								  <li>
-								    <%= product.name %>
-								    <%= link_to 'Show', admin_product_path(product) %>
-								    <%= link_to 'Edit', edit_admin_product_path(product) %>
-								    <%= link_to 'Delete', admin_product_path(product), method: :delete, data: {confirm:"Are you sure?"} %>
-								  </li>
-								  <% end %>
-								</ul>
-								<%= paginate @products %>
+						  	<%= render "table" %>
 						  </div>
 						  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+						  	<!-- new form -->
 								<%= render "form" %>
 						  </div>
 						  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Text....</div>

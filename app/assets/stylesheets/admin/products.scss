@@ -25,6 +25,27 @@
 								}
 							}
 						}
+						> .tab-content {
+							> .tab-pane {
+								> .table {
+									> tbody {
+										> tr {
+											> td {
+												> .icon {
+													text-decoration: none;
+												}
+												> .icon1 {
+													color: $deepskyblue;
+												}
+												> .icon2 {
+													color: $orangered;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
