@@ -8,6 +8,7 @@
 		> .row {
 			> .sidebar {
 				> .list-group {
+					box-shadow: 0 4px 70px -18px $dark;
 					> .list-group-item {
 						border: 0;
 						background-color: $darkgray;

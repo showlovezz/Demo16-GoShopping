@@ -8,6 +8,7 @@
 			> .sidecontent {
 				> .widget {
 					background-color: $white;
+					box-shadow: 0 4px 70px -18px $dark;
 					> .widget-header {
 						> h5 {
 							border-bottom: 2px solid $lightgray;
