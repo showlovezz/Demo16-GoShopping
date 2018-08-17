@@ -1,4 +1,4 @@
-<table class="table table-striped table-bordered mb-0">
+<table class="table table-bordered mb-0">
 	<caption>List of Products</caption>
   <thead>
     <tr>
@@ -16,7 +16,7 @@
 	      <td><%= product.name %></td>
 	      <td>$<%= product.product_price %></td>
 	      <td><%= truncate(product.description, length: 85) %></td>
-	      <td colspan="3">
+	      <td>
 	      	<%= link_to edit_admin_product_path(product), class: "icon icon1" do %>
 	      		<i class="fas fa-edit mr-3"></i>
 	      	<% end %>

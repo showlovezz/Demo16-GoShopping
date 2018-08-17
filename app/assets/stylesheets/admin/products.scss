@@ -11,36 +11,26 @@
 					box-shadow: 0 4px 70px -18px $dark;
 					> .widget-header {
 						> h5 {
-							border-bottom: 2px solid $lightgray;
+							border-bottom: 5px solid $primary;
 							padding: 0.75rem 1rem;
 						}
 					}
 					> .widget-body {
+						margin-top: 15px;
 						padding-right: 15px;
 						padding-left: 15px;
-						> ul {
-							> .nav-item {
-								> a {
-									color: $black;
-								}
-							}
-						}
-						> .tab-content {
-							> .tab-pane {
-								> .table {
-									> tbody {
-										> tr {
-											> td {
-												> .icon {
-													text-decoration: none;
-												}
-												> .icon1 {
-													color: $deepskyblue;
-												}
-												> .icon2 {
-													color: $orangered;
-												}
-											}
+						> .table {
+							> tbody {
+								> tr {
+									> td {
+										> .icon {
+											text-decoration: none;
+										}
+										> .icon1 {
+											color: $deepskyblue;
+										}
+										> .icon2 {
+											color: $orangered;
 										}
 									}
 								}
