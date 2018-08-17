@@ -53,6 +53,17 @@
 	}
 }
 
+// _prev_page.html.erb
 .page-item {
 	margin-bottom: 20px;
+}
+
+// products form
+.mains_products_form {
+	.form-item {
+		background-color: $lightgray;
+		padding: 10px 20px 0px 20px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+	}
 }

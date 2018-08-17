@@ -1,25 +1,54 @@
-<% if @product.errors.any? %>
-  <h2>We have some errors here !</h2>
-  <ul>
-    <% @product.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="mains_products_form">
+  <% if @product.errors.any? %>
+    <h2>We have some errors here !</h2>
+    <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
-<%= form_for  [:admin, @product] do |f| %>
-  <%= f.label :name, "Name" %>
-  <%= f.text_field :name %>
+  <%= form_for  [:admin, @product] do |f| %>
+    <div class="form-row form-item">
+      <div class="form-group col-md-6">
+        <h4>
+          <span class="badge badge-warning">
+            <span class="text-danger">* </span>
+            <%= f.label :name, "Name：", class: "mb-0" %>
+          </span>
+        </h4>
+        <%= f.text_field :name, placeholder: "請輸入產品名稱", class: "form-control" %>
+      </div>
+      <div class="form-group col-md-6">
+        <h4>
+          <span class="badge badge-warning">
+            <span class="text-danger">* </span>
+            <%= f.label :product_price, "Price：", class: "mb-0" %>
+          </span>
+        </h4>
+        <%= f.text_field :product_price, placeholder: "請輸入產品價錢", class: "form-control" %>
+      </div>
+    </div>
+    
+    <div class="form-row form-item">
+      <div class="form-group col-md-12">
+        <h4>
+          <span class="badge badge-warning">
+            <span class="text-danger">* </span>
+            <%= f.label :description, "Description：", class: "mb-0" %>
+          </span>
+        </h4>
+        <%= f.text_area :description, rows: "7", placeholder: "請輸入產品描述", class: "form-control" %>
+      </div>
+    </div>
 
-  <%= f.label :product_price, "Price" %>
-  <%= f.text_field :product_price %>
-
-  <%= f.label :description, "Description" %>
-  <%= f.text_area :description %>
-
-  <%= f.label :product_image, "Photo" %>
-  <%= image_tag @product.product_image_url, width: '300px' if @product.product_image? %>
-  <%= f.file_field :product_image %>
-
-  <%= f.submit %>
-<% end %>
+    <div class="form-group">
+      <div class="custom-file">
+        <%= image_tag @product.product_image_url, width: '300px' if @product.product_image? %>
+        <%= f.label :product_image, "Photo", class: "custom-file-label", for: "customFile" %>
+        <%= f.file_field :product_image, class: "custom-file-input", id: "customFile" %>
+      </div>
+    </div>
+    <%= f.submit class: "btn btn-primary btn-lg mb-4" %>
+  <% end %>
+</div>
