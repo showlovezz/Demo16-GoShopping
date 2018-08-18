@@ -2,11 +2,12 @@ namespace :dev do
 	task fake: :environment do
 		Product.destroy_all
 
-		100.times do |i|
+		50.times do |i|
 			Product.create!(
 				name: FFaker::Product.product_name,
-				product_price: FFaker::rand(100..5000),
-				description: FFaker::Lorem.paragraph
+				product_price: FFaker::rand(1000..3000),
+				description: FFaker::Lorem.paragraph,
+				category_id: Category.all.sample.id
 			)
 		end
 
