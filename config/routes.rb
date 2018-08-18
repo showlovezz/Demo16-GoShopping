@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   namespace :admin, path: "mains" do
   	root "mains#index" # Back-end index
   	resources :products # Back-end for products
+  	resources :categories # Back-end for categories
   end
 end
