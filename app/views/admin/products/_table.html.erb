@@ -3,9 +3,10 @@
   <thead>
     <tr>
       <th scope="col">id</th>
+      <th scope="col">Create_Time</th>
+      <th scope="col">Category</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
-      <th scope="col">Description</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -13,10 +14,14 @@
 	  <tbody>
 	    <tr>
 	      <th scope="row"><%= product.id %></th>
+	      <td><%= verbose_data(product.created_at) %></td>
+	      <td>[<%= product.category.name %>]</td>
 	      <td><%= product.name %></td>
 	      <td>$<%= product.product_price %></td>
-	      <td><%= truncate(product.description, length: 85) %></td>
-	      <td>
+	      <td class="text-center">
+	      	<%= link_to admin_product_path(product), class: "icon icon1" do %>
+	      		<i class="far fa-eye mr-3"></i>
+	      	<% end %>
 	      	<%= link_to edit_admin_product_path(product), class: "icon icon1" do %>
 	      		<i class="fas fa-edit mr-3"></i>
 	      	<% end %>
