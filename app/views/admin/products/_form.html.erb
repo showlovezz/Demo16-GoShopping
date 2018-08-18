@@ -10,7 +10,16 @@
 
   <%= form_for  [:admin, @product] do |f| %>
     <div class="form-row form-item">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-3">
+        <h4>
+          <span class="badge badge-warning">
+            <span class="text-danger">* </span>
+            <%= f.label :category, "Category：", class: "mb-0" %>
+          </span>
+        </h4>
+        <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, {class: "form-control"} %>
+      </div>
+      <div class="form-group col-md-7">
         <h4>
           <span class="badge badge-warning">
             <span class="text-danger">* </span>
@@ -19,7 +28,7 @@
         </h4>
         <%= f.text_field :name, placeholder: "請輸入產品名稱", class: "form-control" %>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-2">
         <h4>
           <span class="badge badge-warning">
             <span class="text-danger">* </span>
