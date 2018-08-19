@@ -1,7 +1,4 @@
-class Admin::MainsController < ApplicationController
-	before_action :authenticate_user!
-  before_action :authenticate_admin
-  
+class Admin::MainsController < Admin::BaseController
 	def index
 		@products = Product.all
 	end
