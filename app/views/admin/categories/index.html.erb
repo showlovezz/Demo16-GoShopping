@@ -1,4 +1,4 @@
-<section class="mains products_render sidber_breadcrumb">
+<section class="mains products_index sidber_breadcrumb">
 	<div class="container-fluid">
 		<div class="row">
 			<!-- left sidebar -->
@@ -10,7 +10,7 @@
 			<div class="sidecontent col-12 col-sm-8 col-md-8 col-lg-10 mt-4">
 				<!-- breadcrumb -->
 				<%= render "breadcrumb" %>
-
+				
 				<div class="widget">
 					<!-- tables header -->
 					<div class="widget-header">
@@ -19,13 +19,13 @@
 					<!-- nav -->
 					<ul class="nav nav-tabs">
 					  <li class="nav-item">
-					    <%= link_to admin_products_path, class: "nav-link" do %>
+					    <%= link_to admin_categories_path, class: "nav-link active" do %>
 					      <i class="fas fa-list-ul"></i>List
 					    <% end %>
 					  </li>
 					  <li class="nav-item">
-					    <%= link_to new_admin_product_path, class: "nav-link active" do %>
-					      <i class="fas fa-plus-square"></i>New product
+					    <%= link_to new_admin_category_path, class: "nav-link" do %>
+					      <i class="fas fa-plus-square"></i>New category
 					    <% end %>
 					  </li>
 					  <li class="nav-item">
@@ -35,7 +35,7 @@
 					  </li>
 					</ul>
 					<div class="widget-body">
-						<%= render "form" %>
+						<%= render "table" %>
 					</div>
 				</div>
 			</div>

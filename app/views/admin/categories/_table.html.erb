@@ -1,0 +1,30 @@
+<table class="table table-bordered mb-0">
+	<caption>List of Categories</caption>
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Create_Time</th>
+      <th scope="col">Name</th>
+      <th scope="col">Count</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <% @categories.each do |category| %>
+	  <tbody>
+	    <tr>
+	      <th scope="row"><%= category.id %></th>
+	      <td><%= verbose_data(category.created_at) %></td>
+	      <td><%= category.name %></td>
+	      <td><%= category.products.count %></td>
+	      <td class="text-center">
+	      	<%= link_to edit_admin_category_path(category), class: "icon icon1" do %>
+	      		<i class="fas fa-edit mr-3"></i>
+	      	<% end %>
+	      	<%= link_to admin_category_path(category), method: :delete, data: {confirm:"Are you sure?"}, class: "icon icon2" do %>
+	      		<i class="far fa-minus-square"></i>
+	      	<% end %>
+	      </td>
+	    </tr>
+	  </tbody>
+	<% end %>
+</table>
