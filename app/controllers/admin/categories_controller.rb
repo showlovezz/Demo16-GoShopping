@@ -1,6 +1,4 @@
 class Admin::CategoriesController < Admin::BaseController
-	before_action :authenticate_user!
-  before_action :authenticate_admin
 
   before_action :find_category, only: [ :edit, :update, :destroy]
 
