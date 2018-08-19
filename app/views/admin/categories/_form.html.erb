@@ -1,0 +1,25 @@
+<div class="mains_form">
+  <% if @category.errors.any? %>
+    <h2>We have some errors here !</h2>
+    <ul>
+      <% @category.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form_for  [:admin, @category] do |f| %>
+  	<div class="form-row form-item">
+    	<div class="form-group col-md-12">
+        <h4>
+          <span class="badge badge-warning">
+            <span class="text-danger">* </span>
+            <%= f.label :name, "Name：", class: "mb-0" %>
+          </span>
+        </h4>
+        <%= f.text_field :name, placeholder: "請輸入類別", class: "form-control" %>
+      </div>
+    </div>
+    <%= f.submit class: "btn btn-primary btn-sm page-item" %>
+  <% end %>
+</div>
