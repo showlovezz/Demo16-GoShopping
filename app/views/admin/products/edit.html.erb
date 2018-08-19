@@ -16,6 +16,24 @@
 					<div class="widget-header">
 						<h5 class="mb-0">Tables</h5>
 					</div>
+					<!-- nav -->
+					<ul class="nav nav-tabs">
+					  <li class="nav-item">
+					    <%= link_to admin_products_path, class: "nav-link active" do %>
+					      <i class="fas fa-list-ul"></i>List
+					    <% end %>
+					  </li>
+					  <li class="nav-item">
+					    <%= link_to new_admin_product_path, class: "nav-link" do %>
+					      <i class="fas fa-plus-square"></i>New product
+					    <% end %>
+					  </li>
+					  <li class="nav-item">
+					    <%= link_to "#", class: "nav-link" do %>
+					      <i class="fas fa-file-export"></i>Export
+					    <% end %>
+					  </li>
+					</ul>
 					<div class="widget-body">
 						<%= render "form" %>
 					</div>
