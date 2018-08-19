@@ -1,11 +1,6 @@
 <div class="mains_form">
   <% if @category.errors.any? %>
-    <h2>We have some errors here !</h2>
-    <ul>
-      <% @category.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
+    <%= @category.errors.full_messages.to_sentence %>
   <% end %>
 
   <%= form_for  [:admin, @category] do |f| %>
