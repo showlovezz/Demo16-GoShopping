@@ -11,6 +11,7 @@
 					min-height: 317px;
 					text-decoration: none;
 					color: $black;
+					box-shadow: 15px 15px 20px 0 $lightslategray;
 					> .card-img-top {
 						max-height: 208px;
 						width: 100%;
@@ -27,6 +28,7 @@
 					}
 				}
 				> .card:hover {
+					box-shadow: 2px 4px 8px 0 $lightslategray;
 					> .card-body {
 						> p {
 							span:first-child {
