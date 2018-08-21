@@ -1,10 +1,10 @@
-<div class="mains_form">
+<div class="admin_form">
   <% if @category.errors.any? %>
     <%= @category.errors.full_messages.to_sentence %>
   <% end %>
 
   <%= form_for  [:admin, @category] do |f| %>
-  	<div class="form-row form-item">
+  	<div class="form-row form_item">
     	<div class="form-group col-md-12">
         <h4>
           <span class="badge badge-warning">

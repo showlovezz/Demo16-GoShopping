@@ -1,4 +1,4 @@
-<div class="mains_form">
+<section class="admin_form">
   <% if @product.errors.any? %>
     <h2>We have some errors here !</h2>
     <ul>
@@ -9,7 +9,7 @@
   <% end %>
 
   <%= form_for  [:admin, @product] do |f| %>
-    <div class="form-row form-item">
+    <div class="form-row form_item">
       <div class="form-group col-md-3">
         <h4>
           <span class="badge badge-warning">
@@ -39,7 +39,7 @@
       </div>
     </div>
     
-    <div class="form-row form-item">
+    <div class="form-row form_item">
       <div class="form-group col-md-12">
         <h4>
           <span class="badge badge-warning">
@@ -60,4 +60,4 @@
     </div>
     <%= f.submit class: "btn btn-primary btn-lg page-item" %>
   <% end %>
-</div>
+</section>

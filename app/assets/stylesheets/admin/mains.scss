@@ -2,68 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// mains index, products_index
-.sidber_breadcrumb {
-	> .container-fluid {
-		> .row {
-			> .sidebar {
-				> .list-group {
-					box-shadow: 0 4px 70px -18px $dark;
-					> .list-group-item {
-						border: 0;
-						background-color: $darkgray;
-						color: $white;
-						> i {
-							color: $primary;
-							font-size: 24px;
-							width: 27px;
-							margin-right: 20px;
-						}
-					}
-					> .list-group-item-action:hover {
-						background-color: $dark;
-						> i {
-							color: $white;
-						}
-					}
-					> .active {
-						background-color: $dark;
-						> i {
-							color: $white;
-						}
-					}
-				}
+// 後台選單 Css 屬性
+.admin_menu {
+	> .list-group {
+		> .list-group-item {
+			border: 0;
+			background-color: $darkgray;
+			color: $white;
+			> i {
+				color: $primary;
+				font-size: 24px;
+				width: 27px;
+				margin-right: 20px;
 			}
-			> .sidecontent {
-				> nav {
-					  box-shadow: 0 4px 70px -18px $dark;
-					  margin-bottom: 30px;
-					> ol {
-						background-color: $white;
-						> li {
-							> .breadcrumb-item-item {
-								color: $lightslategray;
-								text-decoration: none;
-								font-weight: 500;
-							}
-							> .breadcrumb-item-item:hover {
-								color: $primary;
-							}
-						}
-					}
+		}
+		> .list-group-item-action:hover {
+			background-color: $dark;
+			> i {
+				color: $white;
+			}
+		}
+		> .active {
+			background-color: $dark;
+			> i {
+				color: $white;
+			}
+		}
+	}
+}
+
+// 後台麵包屑 Css 屬性
+.admin_content {
+	> nav {
+		  margin-bottom: 30px;
+		> ol {
+			background-color: $white;
+			> li {
+				> .breadcrumb-item-item {
+					color: $lightslategray;
+					text-decoration: none;
+					font-weight: 500;
+				}
+				> .breadcrumb-item-item:hover {
+					color: $primary;
 				}
 			}
 		}
 	}
 }
 
-// mains widget
-.row {
+// 後台 Widget Css 屬性 
+.admin_widget {
 	> .widget {
 		margin-bottom: 30px;
 		> .widget-body {
 			height: 130px;
-			box-shadow: 0 4px 70px -18px $dark;
 			> div {
 				margin-bottom: 5px;
 				> i {
@@ -97,4 +90,73 @@
 			}
 		}
 	}
+}
+
+// 後台 form Css 屬性
+.admin_form {
+	.form_item {
+		background-color: $lightgray;
+		padding: 10px 20px 0px 20px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+	}
+}
+
+// Category、Product 區塊內標題的 Css 屬性
+.admin_table_header {
+	> h5 {
+		border-bottom: 5px solid $primary;
+		padding: 0.75rem 1rem;
+	}
+}
+
+// Category、Product 區塊內導覽的 Css 屬性
+.admin_table_nav {
+	> .nav {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-left: 15px;
+		padding-right: 15px;
+		> .nav-item {
+			> .nav-link {
+				color: $pink;
+				font-weight: 600;
+				> i {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+// Category、Product 區塊內表格的 Css 屬性
+.admin_block {
+	background-color: $white;
+	> .admin_table_body {
+		margin-top: 15px;
+		padding-right: 15px;
+		padding-left: 15px;
+		> .table {
+			> tbody {
+				> tr {
+					> td {
+						> .icon {
+							text-decoration: none;
+						}
+						> .icon1 {
+							color: $deepskyblue;
+						}
+						> .icon2 {
+							color: $orangered;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 分頁距離底下的距離 _prev_page.html.erb
+.page-item {
+	margin-bottom: 20px;
 }

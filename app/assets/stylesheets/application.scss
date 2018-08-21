@@ -14,18 +14,7 @@
  */
  @import "bootstrap";
  @import "color";
+ @import "all_style";
  @import "admin/mains";
- @import "admin/products";
- @import "admin/form";
  @import "mains";
  @import "products";
-
-// 放前後台都會使用到的 Css code
-.navbar-nav {
-	width: 100%;
-}
-
-// body 顏色
-body {
-	background-color: $lightgray;
-}

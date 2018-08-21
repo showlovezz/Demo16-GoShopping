@@ -2,7 +2,6 @@ class Admin::ProductsController < Admin::BaseController
 	before_action :find_product, only: [:show, :edit, :update, :destroy]
 	def index
 		@products = Product.page(params[:page]).per(9)
-		# @product = Product.new
 	end
 
 	def new

@@ -1,28 +1,17 @@
-<section class="mains_index sidber_breadcrumb">
+<section class="admin_goshopping">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="sidebar col-12 col-sm-4 col-md-4 col-lg-2 mt-4">
-				<%= render "admin/shared/sidebar" %>
+			<div class="admin_menu col-12 col-sm-4 col-md-4 col-lg-2 mt-4">
+				<!-- menu -->
+				<%= render "menu" %>
 			</div>
-
-			<div class="sidecontent col-12 col-sm-8 col-md-8 col-lg-10 mt-4">
-
+			<div class="admin_content col-12 col-sm-8 col-md-8 col-lg-10 mt-4">
 				<!-- breadcrumb -->
-				<nav aria-label="breadcrumb">
-				  <ol class="breadcrumb">
-				    <li class="breadcrumb-item" aria-current="page">
-				    	<%= link_to "Home", "#", class: "breadcrumb-item-item" %>
-				    </li>
-				    <li class="breadcrumb-item" aria-current="page">
-				    	<%= link_to "Dashboard", admin_root_path, class: "breadcrumb-item-item" %>
-				  	</li>
-				  </ol>
-				</nav>
-				<!-- widget -->
-				<div class="row">
+				<%= render "breadcrumb" %>
+				<div class="row admin_widget">
+					<!-- widget -->
 					<%= render "widget" %>
 				</div>
-				
 			</div>
 		</div>
 	</div>
