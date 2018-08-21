@@ -1,11 +1,12 @@
-<section class="product_show">
-	<div class="product_info">
+<section class="goshopping_product">
+	<div class="goshopping_product_block">
 		<div class="container">
+			<!-- product info -->
 			<div class="row">
-				<div class="col-5">
+				<div class="goshopping_product_image col-5 col-sm-5 col-md-5 col-lg-5">
 					<%= image_tag @product.product_image_url, class: "img-fluid" %>
 				</div>
-				<div class="col-7">
+				<div class="goshopping_product_info col-7 col-sm-7 col-md-7 col-lg-7">
 					<h1><%= @product.name %></h1>
 					<h4>
 						<span class="badge badge-info"><%= @product.category.name %></span>
@@ -14,8 +15,7 @@
 					<h3>
 						<h3>優惠價：<span><%= @product.product_price %></span>元</h3>
 					</h3>
-					<!-- group bottom -->
-					<div class="product_item">
+					<div class="goshopping_product_btn">
 						<%= link_to "放入我的購物車", "#", class: "btn btn-secondary btn_item" %>
 						<%= link_to "加入下次再買清單", "#", class: "btn btn-light btn_item" %>
 						<%= link_to "直接結帳", "#", class: "btn btn-warning btn_item" %>
@@ -23,22 +23,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- nav -->
-		<div class="product_nav">
+		<div class="goshopping_product_nav">
 			<div class="container">
-				<ul class="nav justify-content-start">
-				  <li class="nav-item">
-				    <a class="nav-link active" href="#">產品介紹</a>
-				  </li>
-				  <li class="nav-item">
-				    <a class="nav-link" href="#">訂購須知</a>
-				  </li>
-				  <li class="nav-item">
-				    <a class="nav-link" href="#">消費者商品評鑑</a>
-				  </li>
-				</ul>
+				<!-- product nav -->
+				<%= render "nav" %>
 			</div>
-		</div>	
+		</div>
 	</div>
 </section>
-<!-- col-md-6 -->

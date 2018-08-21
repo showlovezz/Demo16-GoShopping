@@ -2,40 +2,97 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// mains index
-.mains_product_index {
-	> .container-fluid {
-		> .row {
-			> .col-2 {
-				> .card {
-					min-height: 317px;
-					text-decoration: none;
-					color: $black;
-					box-shadow: 15px 15px 20px 0 $lightslategray;
-					> .card-img-top {
-						max-height: 208px;
-						width: 100%;
+// 前台卡片 Css 屬性
+.goshopping_block {
+	> .card {
+		min-height: 317px;
+		text-decoration: none;
+		color: $black;
+		box-shadow: 15px 15px 20px 0 $lightslategray;
+		> .card-img-top {
+			max-height: 208px;
+			width: 100%;
+		}
+		> .card-body {
+			padding: 10px 5px;
+			> p {
+				font-size: 14px;
+				> span:last-child {
+					color: $orangered;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.card:hover {
+		box-shadow: 2px 4px 8px 0 $lightslategray;
+		> .card-body {
+			> p {
+				span:first-child {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
+
+// 前台產品頁面 Css 屬性
+.goshopping_product {
+	> .goshopping_product_block {
+		background-color: #fff;
+		> .container {
+			> .row {
+				> .goshopping_product_image {
+					padding-top: 20px;
+					padding-bottom: 20px;
+				}
+				> .goshopping_product_info {
+					padding-top: 40px;
+					padding-bottom: 20px;
+					> .hr_item {
+						border-style : dashed;
+						border-width: 3px;
+						border-top: 0;
+						border-color: $lightslategray;
 					}
-					> .card-body {
-						padding: 10px 5px;
-						> p {
-							font-size: 14px;
-							> span:last-child {
-								color: $orangered;
-								font-weight: 700;
-							}
+					> h3 {
+						> span {
+							color: $orangered;
+							font-weight: 700;
+						}
+					}
+					> .goshopping_product_btn {
+						border-radius: 10px;
+						padding: 25px;
+						margin-top: 30px;
+						background-color: $lightgray;
+						width: 100%;
+						height: 150px;
+						> .btn_item {
+							width: 280px;
+						}
+						> .btn_item:nth-child(2) {
+							margin-left: 20px;
+						}
+						> .btn_item:nth-child(3) {
+							margin-top: 24px;
 						}
 					}
 				}
-				> .card:hover {
-					box-shadow: 2px 4px 8px 0 $lightslategray;
-					> .card-body {
-						> p {
-							span:first-child {
-								color: $pink;
-							}
-						}
-					}
+			}
+		}
+	}
+}
+
+// 前台產品頁面導覽 Css 屬性
+.goshopping_product_nav {
+	border-top: 1px solid $lightslategray;
+	border-bottom: 1px solid $lightslategray;
+	> .container {
+		> .nav {
+			> .nav-item {
+				> .nav-link {
+					color: $pink;
 				}
 			}
 		}
