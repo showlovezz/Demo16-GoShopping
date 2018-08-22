@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "mains#index" # Front-end index
   resources :products, only: [:index, :show]
+  resources :categories, only: [:show]
 
   namespace :admin, path: "mains" do
   	root "mains#index" # Back-end index
