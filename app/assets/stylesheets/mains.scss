@@ -5,6 +5,7 @@
 // 前台卡片 Css 屬性
 .goshopping_block {
 	> .card {
+		margin-top: 35px;
 		min-height: 317px;
 		text-decoration: none;
 		color: $black;
@@ -31,6 +32,22 @@
 				span:first-child {
 					color: $pink;
 				}
+			}
+		}
+	}
+}
+
+// 前台卡片導覽 Css 屬性
+.goshopping_product_card_nav {
+	margin-top: 35px;
+	> .nav {
+		> .nav-item {
+			> .nav-link {
+				color: $darkgray;
+			}
+			> .active {
+				background-color: $pink;
+				color: $white;
 			}
 		}
 	}

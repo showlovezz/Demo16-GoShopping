@@ -2,11 +2,25 @@
 	<!-- carousel -->
 	<div class="goshopping_carousel"></div>
 
+	<div class="container">
+		<div class="goshopping_product_card_nav">
+			<ul class="nav nav-pills nav-fill">
+			  <li class="nav-item">
+			    <%= link_to "全部產品分類", root_path, class: "nav-link active" %>
+			  </li>
+			  <% @categories.each do |category| %>
+				  <li class="nav-item">
+				  	<%= link_to category.name, category_path(category), class: "nav-link" %>
+				  </li>
+			  <% end %>
+			</ul>
+		</div>
+	</div>
 	<div class="container-fluid">
 		<div class="row">
 			<% @products.each do |product| %>
 				<div class="goshopping_block col-6 col-sm-4 col-md-4 col-lg-2">
-					<%= link_to product_path(product), class: "card mt-4" do %>
+					<%= link_to product_path(product), class: "card" do %>
 						<%= image_tag product.product_image_url, class: "card-img-top", alt: "Card image cap" %>
 					  <div class="card-body">
 					  	<span class="badge badge-warning"><%= product.category.name %></span>
