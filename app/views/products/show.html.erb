@@ -15,7 +15,7 @@
 					<h3>
 						<h3>優惠價：<span><%= @product.product_price %></span>元</h3>
 					</h3>
-					<div class="goshopping_product_btn">
+					<div class="goshopping_product_btn basic_shadow">
 						<%= link_to "放入我的購物車", "#", class: "btn btn-secondary btn_item" %>
 						<%= link_to "加入下次再買清單", "#", class: "btn btn-light btn_item" %>
 						<%= link_to "直接結帳", "#", class: "btn btn-warning btn_item" %>
@@ -30,4 +30,22 @@
 			</div>
 		</div>
 	</div>
+	<div class="goshopping_product_knowledge">
+		<div class="container">
+			<div class="row">
+				<!-- product knowledge -->
+				<div class="col-8 col-sm-8 col-md-10 col-lg-10">
+					<h6 class="basic_shadow">產品說明</h6>
+					<div class="basic_shadow">
+						<%= simple_format @product.description %>
+					</div>
+				</div>
+				<!-- comment -->
+				<div class="col-4 col-sm-4 col-md-2 col-lg-2">
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+

@@ -98,3 +98,27 @@
 		}
 	}
 }
+
+// 前台產品頁面產品說明 Css 屬性
+.goshopping_product_knowledge {
+	> .container {
+		> .row {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			> .col-8 {
+				> h6 {
+					background-color: $white;
+					color: $lightslategray;
+					padding: 10px 15px;
+					border-radius: 5px;
+				}
+				> div {
+					background-color: $white;
+					padding: 20px 15px 5px 15px;
+					min-height: 10px;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}
