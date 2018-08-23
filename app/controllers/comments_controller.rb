@@ -1,2 +1,26 @@
 class CommentsController < ApplicationController
+	
+	before_action :find_product, only: [:index, :create]
+
+	def index
+		@comments = Comment.all
+		@comment = Comment.new
+	end
+
+	def create
+		@comment = @product.comments.build(comment_params)
+		@comment.user = current_user
+		@comment.save!
+		redirect_to product_comments_path
+	end
+
+	private
+
+	def find_product
+		@product = Product.find(params[:product_id])
+	end
+
+	def comment_params
+		params.require(:comment).permit(:content)
+	end
 end

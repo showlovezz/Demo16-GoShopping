@@ -26,29 +26,29 @@
 		<div class="goshopping_product_nav">
 			<div class="container">
 				<!-- product nav -->
-				<%= render "nav" %>
+				<%= render "products/nav" %>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-8 col-sm-8 col-md-10 col-lg-10">
-				<div class="goshopping_product_knowledge">
-					<!-- Product knowledge -->
+				<div class="goshopping_product_comment">
+					<!-- Comment show -->
 					<div class="goshopping_product_knowledge_item1">
-						<h6 class="basic_shadow">產品說明</h6>
-						<div class="basic_shadow"><%= simple_format @product.description %></div>
+						
 					</div>
-					<!-- Shopping knowledge -->
-					<div class="goshopping_product_knowledge_item2">
-						<h6 class="basic_shadow">購物說明</h6>
-						<div class="basic_shadow">
-							<p>因拍攝略有色差，圖片僅供參考，顏色請以實際收到商品為準。</p>
-							<p><span>專櫃小名品/體驗組說明</span></p>
-							<p>為公司大量採購有價取得之小容量商品，特以優惠價回饋，保留專櫃出品原貌，內含贈品字樣；部份商品無中文說明亦無封膜，請確認能接受者再行下訂。</p>
-							<p><span>退換貨說明</span></p>
-							<p>會員所購買的商品均享有到貨十天的猶豫期（含例假日）。退回之商品必須於猶豫期內寄回。</p>
-							<p>辦理退換貨時，商品必須是全新狀態與完整包裝(請注意保持商品本體、配件、贈品、保證書、原廠包裝及所有附隨文件或資料的完整性，切勿缺漏任何配件或損毀原廠外盒)。退回商品無法回復原狀者，恐將影響退貨權益或需負擔部分費用。</p>
+					<!-- Comment create -->
+					<div class="goshopping_product_knowledge_item2 basic_shadow">
+						<div>
+							<%= form_for [@product, @comment] do |f| %>
+								<div class="form-group">
+									<%= f.text_area :content, rows: "5", placeholder: "留個言吧 !", class: "form-control" %>
+								</div>
+								<div class="form-group">
+									<%= f.submit class: "btn btn-primary" %>
+								</div>
+							<% end %>
 						</div>
 					</div>
 				</div>
