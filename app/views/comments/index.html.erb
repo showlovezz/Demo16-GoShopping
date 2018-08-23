@@ -36,11 +36,19 @@
 				<div class="goshopping_product_comment">
 					<!-- Comment show -->
 					<div class="goshopping_product_knowledge_item1">
-						
+						<% @product.comments.each do |comment| %>
+							<div class="basic_shadow">
+					      <h5><%= comment.user.email %></h5>
+					      <p><%= simple_format comment.content %></p>
+					      <p class="text-muted">
+					        <em><%= verbose_data(comment.created_at) %></em>
+					      </p>
+					    </div>
+						<% end %>
 					</div>
 					<!-- Comment create -->
-					<div class="goshopping_product_knowledge_item2 basic_shadow">
-						<div>
+					<div class="goshopping_product_knowledge_item2 ">
+						<div class="basic_shadow">
 							<%= form_for [@product, @comment] do |f| %>
 								<div class="form-group">
 									<%= f.text_area :content, rows: "5", placeholder: "留個言吧 !", class: "form-control" %>

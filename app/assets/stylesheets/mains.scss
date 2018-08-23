@@ -162,14 +162,27 @@
 	}
 }
 
-// 前台產品頁面 Comment Css 屬性
+// 前台產品頁面 Comment show Css 屬性
+.goshopping_product_comment {
+	> .goshopping_product_knowledge_item1 {
+		margin-top: 20px;
+		> div {
+			background-color: $white;
+			padding: 20px 15px 5px 15px;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// 前台產品頁面 Comment create Css 屬性
 .goshopping_product_comment {
 	> .goshopping_product_knowledge_item2 {
-		margin-top: 20px;
+		margin-top: 10px;
 		margin-bottom: 20px;
 		> div {
 			background-color: $white;
-			padding: 30px 20px 10px 20px;
+			padding: 20px 15px 5px 15px;
 			border-radius: 5px;
 		}
 	}
