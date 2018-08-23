@@ -1,0 +1,17 @@
+<% @products.each do |product| %>
+	<div class="goshopping_block col-6 col-sm-4 col-md-4 col-lg-2">
+		<%= link_to product_path(product), class: "card" do %>
+			<%= image_tag product.product_image_url, class: "card-img-top", alt: "Card image cap" %>
+		  <div class="card-body">
+		  	<span class="badge badge-warning"><%= product.category.name %></span>
+		    <p class="card-text text-center">
+		    	<span><%= product.name %></span><br>
+		    	優惠價：<span><%= product.product_price %></span>元
+		    </p>
+		  </div>
+		<% end %>
+	</div>
+<% end %>
+<div class="text-center">
+	<%= paginate @products %>
+</div>
