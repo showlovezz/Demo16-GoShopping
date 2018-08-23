@@ -3,30 +3,13 @@
 		<div class="container">
 			<!-- product info -->
 			<div class="row">
-				<div class="goshopping_product_image col-5 col-sm-5 col-md-5 col-lg-5">
-					<%= image_tag @product.product_image_url, class: "img-fluid" %>
-				</div>
-				<div class="goshopping_product_info col-7 col-sm-7 col-md-7 col-lg-7">
-					<h1><%= @product.name %></h1>
-					<h4>
-						<span class="badge badge-info"><%= @product.category.name %></span>
-					</h4>
-					<hr class="hr_item">
-					<h3>
-						<h3>優惠價：<span><%= @product.product_price %></span>元</h3>
-					</h3>
-					<div class="goshopping_product_btn basic_shadow">
-						<%= link_to "放入我的購物車", "#", class: "btn btn-secondary btn_item" %>
-						<%= link_to "加入下次再買清單", "#", class: "btn btn-light btn_item" %>
-						<%= link_to "直接結帳", "#", class: "btn btn-warning btn_item" %>
-					</div>
-				</div>
+				<%= render "shared/product_info" %>
 			</div>
 		</div>
 		<div class="goshopping_product_nav">
 			<div class="container">
 				<!-- product nav -->
-				<%= render "nav" %>
+				<%= render "shared/nav" %>
 			</div>
 		</div>
 	</div>
