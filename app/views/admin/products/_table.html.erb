@@ -7,6 +7,7 @@
       <th scope="col">Category</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
+      <th scope="col">Publish</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -18,10 +19,14 @@
 	      <td>[<%= product.category.name %>]</td>
 	      <td><%= product.name %></td>
 	      <td>$<%= product.product_price %></td>
-	      <td class="text-center">
-	      	<%= link_to product_path(product), class: "icon icon1" do %>
-	      		<i class="far fa-eye mr-3"></i>
+	      <td>
+	      	<% if product.published %>
+	      		<%= link_to "Unpublish", unpublish_admin_product_path(product), method: :post, class: "badge badge-dark" %>
+	      	<% else %>
+	      		<%= link_to "Publish", publish_admin_product_path(product), method: :post, class: "badge badge-success" %>
 	      	<% end %>
+	      </td>
+	      <td class="text-center">
 	      	<%= link_to edit_admin_product_path(product), class: "icon icon1" do %>
 	      		<i class="fas fa-edit mr-3"></i>
 	      	<% end %>

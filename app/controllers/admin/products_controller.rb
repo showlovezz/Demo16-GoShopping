@@ -1,5 +1,5 @@
 class Admin::ProductsController < Admin::BaseController
-	before_action :find_product, only: [:show, :edit, :update, :destroy]
+	before_action :find_product, only: [:edit, :update, :destroy, :publish, :unpublish]
 	def index
 		@products = Product.page(params[:page]).per(9)
 	end
@@ -19,9 +19,6 @@ class Admin::ProductsController < Admin::BaseController
 		end
 	end
 
-	def show
-	end
-
 	def edit
 	end
 
@@ -38,6 +35,16 @@ class Admin::ProductsController < Admin::BaseController
 	def destroy
 		@product.destroy
 		flash[:alert] = "商品已被刪除。"
+		redirect_to admin_products_path
+	end
+
+	def publish
+		@product.publish
+		redirect_to admin_products_path
+	end
+
+	def unpublish
+		@product.unpublish
 		redirect_to admin_products_path
 	end
 
