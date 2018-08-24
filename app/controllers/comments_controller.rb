@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 	
-	before_action :find_product, only: [:index, :create]
+	before_action :find_product, only: [:index, :create, :destroy]
 
 	def index
 		@comments = @product.comments.order("created_at DESC")
@@ -12,6 +12,15 @@ class CommentsController < ApplicationController
 		@comment.user = current_user
 		@comment.save!
 		redirect_to product_comments_path
+	end
+
+	def destroy
+		@comment = Comment.find(params[:id])
+
+		if current_user.admin?
+			@comment.destroy
+			redirect_to product_comments_path
+		end
 	end
 
 	private
