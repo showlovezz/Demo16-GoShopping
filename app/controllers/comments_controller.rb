@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 	before_action :find_product, only: [:index, :create]
 
 	def index
-		@comments = Comment.all
+		@comments = @product.comments.order("created_at DESC")
 		@comment = Comment.new
 	end
 
