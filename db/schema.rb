@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_23_101600) do
+ActiveRecord::Schema.define(version: 2018_08_24_101406) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2018_08_23_101600) do
     t.datetime "updated_at", null: false
     t.string "product_image"
     t.integer "category_id"
+    t.boolean "published", default: false
+    t.datetime "published_at"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
