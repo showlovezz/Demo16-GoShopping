@@ -9,7 +9,12 @@ Rails.application.routes.draw do
 
   namespace :admin, path: "mains" do
   	root "mains#index" # Back-end index
-  	resources :products, except: [:show] # Back-end for products
+  	resources :products, except: [:show] do # Back-end for products
+      member do # 發佈 / 取消發佈
+        post :publish
+        post :unpublish
+      end
+    end
   	resources :categories # Back-end for categories
   end
 end
