@@ -15,7 +15,7 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-8 col-sm-8 col-md-10 col-lg-10">
+			<div class="col-9 col-sm-9 col-md-9 col-lg-9">
 				<div class="goshopping_product_knowledge">
 					<!-- Product knowledge -->
 					<div class="goshopping_product_knowledge_item1">
@@ -37,8 +37,21 @@
 				</div>
 			</div>
 			<!-- Random product -->
-			<div class="col-4 col-sm-4 col-md-2 col-lg-2">
-				<div class="goshopping_product_random"></div>
+			<div class="col-3 col-sm-3 col-md-3 col-lg-3">
+				<% @random_product.each do |random_product| %>
+					<div class="goshopping_product_random">
+						<%= link_to product_path(random_product), class: "card basic_shadow" do %>
+							<%= image_tag random_product.product_image_url, class: "card-img-top", alt: "Card image cap" %>
+						  <div class="card-body">
+						  	<span class="badge badge-warning"><%= random_product.category.name %></span>
+						    <p class="card-text text-center">
+						    	<span><%= random_product.name %></span><br>
+						    	優惠價：<span><%= random_product.product_price %></span>元
+						    </p>
+						  </div>
+						<% end %>
+					</div>
+				<% end %>
 			</div>
 		</div>
 	</div>
