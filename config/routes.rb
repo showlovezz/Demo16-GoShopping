@@ -15,6 +15,8 @@ Rails.application.routes.draw do
         post :unpublish
       end
     end
+    # Back-end for comments 要放這裡，放到上面 product 底下的話，變成要帶入一個值 product 值才行，這樣太奇怪了。
+    resources :comments, only: [:index]
   	resources :categories # Back-end for categories
   end
 end

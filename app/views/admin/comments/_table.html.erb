@@ -1,0 +1,23 @@
+<table class="table table-bordered mb-0">
+	<caption>List of Comments</caption>
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Product</th>
+      <th scope="col">Content</th>
+    </tr>
+  </thead>
+  <% @products.each do |product| %>
+	  <tbody>
+	    <tr>
+	      <th scope="row"><%= product.id %></th>
+	      <td><%= product.name %></td>
+	      <td>
+	      	<% product.comments.each do |comment| %>
+	      		<li><%= comment.content %></li>
+	      	<% end %>
+	      </td>
+	    </tr>
+	  </tbody>
+	<% end %>
+</table>
