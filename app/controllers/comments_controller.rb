@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
 	def index
 		@comments = @product.comments.order("created_at DESC")
 		@comment = Comment.new
+		@random_product = Product.where.not(id: @product.id).order("RANDOM()").limit(3)
 	end
 
 	def create
