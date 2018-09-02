@@ -5,7 +5,7 @@
 // mains/index 前台卡片 Css 屬性
 .goshopping_block {
 	> .card {
-		margin-top: 35px;
+		margin-bottom: 35px;
 		min-height: 317px;
 		text-decoration: none;
 		color: $black;
@@ -38,20 +38,20 @@
 }
 
 // mains/index 前台卡片導覽 Css 屬性
-.goshopping_product_card_nav {
-	margin-top: 35px;
-	> .nav {
-		> .nav-item {
-			> .nav-link {
-				color: $darkgray;
-			}
-			> .active {
-				background-color: $pink;
-				color: $white;
-			}
-		}
-	}
-}
+// .goshopping_product_card_nav {
+// 	margin-top: 35px;
+// 	> .nav {
+// 		> .nav-item {
+// 			> .nav-link {
+// 				color: $darkgray;
+// 			}
+// 			> .active {
+// 				background-color: $pink;
+// 				color: $white;
+// 			}
+// 		}
+// 	}
+// }
 
 // product/show 前台產品頁面 Css 屬性
 .goshopping_product {
@@ -217,5 +217,44 @@
 				}
 			}
 		}
+	}
+}
+
+// 網站前台清單群組 Css 屬性
+.card {
+	> .product_list {
+		background-color: $info;
+		color: $white;
+		padding: 20px;
+		border-bottom: 3px solid $orangered;
+		> i {
+			font-size: 1.25rem;
+			margin-right: 10px;
+		}
+		> h5 {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+	> .card-body {
+		> ul {
+			> li {
+				> .text-dark {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+// jumbotron Css 屬性
+.jumbotron {
+	background-image: url("https://images.pexels.com/photos/717130/pexels-photo-717130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 200%;
+	> .container {
+		color: $white;
 	}
 }
